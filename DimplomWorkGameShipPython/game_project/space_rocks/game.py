@@ -1,6 +1,6 @@
 import pygame
 from utils import load_sprite
-from models import GameObject
+from models import Spaceship
 
 class SpaceRocks:
 
@@ -8,9 +8,7 @@ class SpaceRocks:
         self._init_pygame()
         self.screen = pygame.display.set_mode((800, 600))
         self.background = load_sprite("space1", False)
-        self.spaceship = GameObject(
-            (400, 300), load_sprite("spaceship"), (0, 0)
-        )
+        self.spaceship = Spaceship((400, 300))
     def main_loop(self):
         while True:
             self._handle_input()
